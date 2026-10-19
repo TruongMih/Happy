@@ -1,0 +1,186 @@
+
+/* Cài đặt chung */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background: #fff0f4;
+    font-family: "Segoe UI", Arial, sans-serif;
+    color: #81465b;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding: 30px 16px;
+}
+
+/* Khung nội dung chính */
+.card {
+    width: 100%;
+    max-width: 520px;
+    padding: 30px 32px;
+    text-align: center;
+
+    background: rgba(255, 255, 255, 0.75);
+    border: 1px solid #ffe0e9;
+    border-radius: 28px;
+
+    box-shadow: 0 15px 45px rgba(190, 100, 130, 0.12);
+}
+
+/* Dòng chữ phía trên */
+.top-text {
+    font-size: 11px;
+    letter-spacing: 4px;
+    color: #cf8ca2;
+    margin-bottom: 12px;
+}
+
+/* Tiêu đề */
+h1 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 36px;
+    color: #c65d82;
+    margin-bottom: 12px;
+}
+
+/* Khu vực bó hoa */
+.flower-container {
+    position: relative;
+    width: 100%;
+    max-width: 330px;
+    margin: 0 auto 10px;
+}
+
+.bouquet {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+
+    filter: drop-shadow(0 10px 12px rgba(180, 90, 120, 0.12));
+    animation: float 3s ease-in-out infinite;
+}
+
+/* Trái tim trang trí */
+.heart {
+    position: absolute;
+    color: #e99bb5;
+    z-index: 1;
+    animation: float 3s ease-in-out infinite;
+}
+
+.heart-1 {
+    top: 18%;
+    left: 5%;
+    font-size: 30px;
+}
+
+.heart-2 {
+    top: 38%;
+    right: 3%;
+    font-size: 20px;
+    animation-delay: 0.5s;
+}
+
+.heart-3 {
+    bottom: 18%;
+    left: 10%;
+    font-size: 24px;
+    animation-delay: 1s;
+}
+
+/* Lời chúc */
+.message {
+    margin-top: 8px;
+}
+
+.message h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    color: #c65d82;
+    font-size: 25px;
+    margin-bottom: 16px;
+}
+
+.message p {
+    font-size: 14px;
+    line-height: 1.9;
+    margin-bottom: 12px;
+    color: #805666;
+}
+
+.message .love-text {
+    font-size: 17px;
+    font-weight: 600;
+    color: #d45e87;
+    margin-top: 18px;
+}
+
+.signature {
+    font-family: Georgia, "Times New Roman", serif;
+    font-style: italic;
+    color: #c7839b;
+    font-size: 14px;
+    margin-top: 18px;
+}
+
+/* Chân trang */
+footer {
+    margin-top: 22px;
+    color: #c58ca0;
+    font-size: 11px;
+    letter-spacing: 1px;
+}
+
+/* Hiệu ứng chuyển động nhẹ */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-7px);
+    }
+}
+
+/* Tối ưu cho điện thoại */
+@media (max-width: 480px) {
+    body {
+        padding: 20px 12px;
+    }
+
+    .card {
+        padding: 25px 20px;
+        border-radius: 22px;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    .flower-container {
+        max-width: 280px;
+    }
+
+    .message h2 {
+        font-size: 23px;
+    }
+
+    .message p {
+        font-size: 13px;
+    }
+}
+
+/* Hỗ trợ người dùng hạn chế chuyển động */
+@media (prefers-reduced-motion: reduce) {
+    .bouquet,
+    .heart {
+        animation: none;
+    }
+}
